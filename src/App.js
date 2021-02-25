@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
+import Hello from "./1) react- begin/Hello";
+import Jsx from "./2) jsx문법/Jsx";
+import Parent from "./3) props로 값전달/Parent";
+import Props from "./3) props로 값전달/Props";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Hello></Hello> {/* 1) react- begin */}
+      <Jsx></Jsx> {/* 2) jsx문법 */}
+      <Props name="react" color="red"></Props> {/* 3) props로 값전달 */}
+      <Parent>
+        <Hello></Hello> {/* 1) react- begin */}
+        <Jsx></Jsx> {/* 2) jsx문법 */}
+      </Parent>
     </div>
   );
 }
